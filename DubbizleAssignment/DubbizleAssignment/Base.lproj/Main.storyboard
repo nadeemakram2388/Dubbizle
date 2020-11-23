@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="S7V-n9-GZe">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item List View Controller-->
+        <scene sceneID="plL-DK-6A8">
+            <objects>
+                <viewController storyboardIdentifier="ItemListViewController" id="97o-Ab-YRN" customClass="ItemListViewController" customModule="DubbizleAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wal-Fi-lib">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NJl-6v-CDv">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="97o-Ab-YRN" id="lf2-ss-YET"/>
+                                    <outlet property="delegate" destination="97o-Ab-YRN" id="1gv-hq-d09"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zNY-Jh-VBH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NJl-6v-CDv" firstAttribute="leading" secondItem="zNY-Jh-VBH" secondAttribute="leading" id="FfJ-1L-wxH"/>
+                            <constraint firstItem="zNY-Jh-VBH" firstAttribute="trailing" secondItem="NJl-6v-CDv" secondAttribute="trailing" id="I5S-f9-eOM"/>
+                            <constraint firstItem="NJl-6v-CDv" firstAttribute="top" secondItem="zNY-Jh-VBH" secondAttribute="top" id="nFw-kX-MMa"/>
+                            <constraint firstItem="zNY-Jh-VBH" firstAttribute="bottom" secondItem="NJl-6v-CDv" secondAttribute="bottom" id="t8S-kD-Nmn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1hg-8d-onD"/>
+                    <connections>
+                        <outlet property="itemTableView" destination="NJl-6v-CDv" id="GC1-0m-N4M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uhM-lO-dy9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-265.21739130434787" y="-220.3125"/>
+        </scene>
+        <!--Item Detail View Controller-->
+        <scene sceneID="lzV-hc-UiQ">
+            <objects>
+                <viewController storyboardIdentifier="ItemDetailViewController" id="0G7-Rc-KGM" customClass="ItemDetailViewController" customModule="DubbizleAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9TL-vl-E7e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q5W-Yt-rs1">
+                                <rect key="frame" x="0.0" y="804" width="414" height="92"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="254" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9B-PT-DVq">
+                                        <rect key="frame" x="333.5" y="12" width="30" height="19.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="10" id="Shi-el-jBL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="suit.heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FUZ-A0-ou2">
+                                        <rect key="frame" x="372" y="13.5" width="30" height="27.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="FUZ-A0-ou2" secondAttribute="height" multiplier="1:1" id="ZwB-JK-gfn"/>
+                                            <constraint firstAttribute="height" constant="30" id="e5b-xb-QiA"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Item Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMM-mB-RC2">
+                                        <rect key="frame" x="12" y="50" width="390" height="22"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29567237986743994" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="LMM-mB-RC2" firstAttribute="top" secondItem="FUZ-A0-ou2" secondAttribute="bottom" constant="8" symbolic="YES" id="3TR-ZR-iJW"/>
+                                    <constraint firstAttribute="bottom" secondItem="LMM-mB-RC2" secondAttribute="bottom" constant="20" id="DvQ-vL-ogE"/>
+                                    <constraint firstAttribute="trailing" secondItem="FUZ-A0-ou2" secondAttribute="trailing" constant="12" id="F3L-IG-jhO"/>
+                                    <constraint firstItem="LMM-mB-RC2" firstAttribute="leading" secondItem="Q5W-Yt-rs1" secondAttribute="leading" constant="12" id="F8A-Br-Naz"/>
+                                    <constraint firstItem="FUZ-A0-ou2" firstAttribute="top" secondItem="Q5W-Yt-rs1" secondAttribute="top" constant="12" id="Ffm-1N-iew"/>
+                                    <constraint firstAttribute="trailing" secondItem="LMM-mB-RC2" secondAttribute="trailing" constant="12" id="bhe-Xd-d7H"/>
+                                    <constraint firstItem="FUZ-A0-ou2" firstAttribute="leading" secondItem="i9B-PT-DVq" secondAttribute="trailing" constant="8.5" id="bl4-va-Hvr"/>
+                                    <constraint firstItem="i9B-PT-DVq" firstAttribute="top" secondItem="FUZ-A0-ou2" secondAttribute="top" id="hx6-Os-MoI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QPF-am-MDX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Q5W-Yt-rs1" firstAttribute="leading" secondItem="9TL-vl-E7e" secondAttribute="leading" id="XNe-B7-JkJ"/>
+                            <constraint firstAttribute="trailing" secondItem="Q5W-Yt-rs1" secondAttribute="trailing" id="YpD-qD-bRK"/>
+                            <constraint firstAttribute="bottom" secondItem="Q5W-Yt-rs1" secondAttribute="bottom" id="hdX-5c-TJM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="favoriteImageView" destination="FUZ-A0-ou2" id="6Fi-Kd-yLQ"/>
+                        <outlet property="itemNameLabel" destination="LMM-mB-RC2" id="Yrh-co-g81"/>
+                        <outlet property="itemTimeLabel" destination="i9B-PT-DVq" id="YoH-QM-lLQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dug-zW-pYl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="408.69565217391306" y="-220.3125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1HB-UH-DOk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="S7V-n9-GZe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hai-FY-XsK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="97o-Ab-YRN" kind="relationship" relationship="rootViewController" id="wM6-Va-WYC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xnJ-NB-7QM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1175.3623188405797" y="-220.3125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="suit.heart" catalog="system" width="128" height="109"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
